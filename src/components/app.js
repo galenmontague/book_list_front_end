@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BooksReadIndex from "./booksReadIndex"
-import BooksToReadIndex from "./booksToReadIndex"
+// import BooksToReadIndex from "./booksToReadIndex"
 
 export default class App extends Component {
   render() {
@@ -8,7 +8,7 @@ export default class App extends Component {
       <div className='app'>
         <h1>Galen Montague's Favorite Books</h1>
         <BooksReadIndex />
-        <BooksToReadIndex />
+        {/* <BooksToReadIndex /> */}
       </div>
     );
   }

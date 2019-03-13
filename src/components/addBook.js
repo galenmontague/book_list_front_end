@@ -18,7 +18,7 @@ export default class AddBook extends Component {
     } 
 
     handleSubmit(event) {
-        event.preventDefault
+        event.preventDefault()
         let title = this.state.title
         let author = this.state.author
 
@@ -32,7 +32,6 @@ export default class AddBook extends Component {
         .then(response => {return response.json();})
         .then(responseData => {return responseData})
         .then(() => {this.props.history.push('/')})
-
         .catch(err => {
             console.log("Fetch error" + err)
         })
@@ -52,7 +51,7 @@ export default class AddBook extends Component {
                     </form>
                 </div>
 
-                <div className='books'>
+                {/* <div className='books'>
                     <h1>What books would you like to read?</h1>
                     <form onSubmit={this.handleSubmit} >
                         <label>Title</label>
@@ -61,7 +60,7 @@ export default class AddBook extends Component {
                         <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
                         <input type="submit" value="Submit" />
                     </form>
-                </div>
+                </div> */}
             </div>
         )
     }
