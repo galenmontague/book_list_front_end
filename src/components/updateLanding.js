@@ -7,7 +7,6 @@ export default function UpdateLanding(props) {
         <div>
             <h1>You updated a book.</h1>
             <Link to={"/"} >View All Books</Link>
-            {console.log(props)}
         </div>
     )
 } 

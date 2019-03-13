@@ -39,13 +39,13 @@ class UpdateBook extends Component {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({title: title, author: author})
-            // turning this info into a json object
+            // turns this info into a json object
         })
         .then(response => {return response.json();})
             // makes the return a json object (in this case, we already set up the api to return a json, but this would be needed if we didn't know what an api returns)
         .then(responseData => {return responseData})
-            // takes the data that is returned in the last .then statement (in all .then cases)
-            // this helps us to have access to what is being returned from the api in case we need to use it fix problems if the come from the api side. We are not accessing this return any where in this app right now.
+            // In all .then cases, the next .then statement takes the data that is returned in the last .then statement
+            // This helps us to have access to what is being returned from the api in case we need to use it fix problems if the come from the api side. We are not accessing this return any where in this app right now.
         // .then(() => {this.props.history.push('/update_book/<id>')})
         .then(() => {this.props.history.push('/')})
         .catch(err => {
@@ -71,7 +71,6 @@ class UpdateBook extends Component {
                     </div>
                     <div>
                         <input type="submit" value="Submit" updatedBookInfo={this.state} />
-
                     </div>
                 </form>
              </div>
@@ -80,4 +79,4 @@ class UpdateBook extends Component {
 }
 
 export default withRouter(UpdateBook);
-// wherever we export this component to, give it access to this route
+// wherever we export this component to, gives it access to a route for UpdateBook
