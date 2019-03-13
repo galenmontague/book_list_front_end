@@ -33,7 +33,7 @@ class UpdateBook extends Component {
         let title = this.state.title;
         let author = this.state.author;
 
-        fetch ( `http://localhost:5000/update_book/${this.state.id}`, {
+        fetch ( `https://gm-book-api-practice.herokuapp.com/update_book/${this.state.id}`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json"

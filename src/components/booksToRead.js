@@ -22,7 +22,7 @@ export default class BooksToRead extends Component {
         let title = this.state.title
         let author = this.state.author
 
-        fetch ( "http://localhost:5000/book/input", {
+        fetch ( "https://gm-book-api-practice.herokuapp.com/book/input", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

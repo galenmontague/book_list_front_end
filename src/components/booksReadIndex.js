@@ -13,7 +13,7 @@ export default class BooksReadIndex extends Component {
     }
 
     componentDidMount() {
-        fetch ( "http://localhost:5000/books", {
+        fetch ( "https://gm-book-api-practice.herokuapp.com/books", {
             method: 'GET',
             headers: {
                 "accepts": "application/json",

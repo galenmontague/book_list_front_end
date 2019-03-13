@@ -22,7 +22,7 @@ export default class AddBook extends Component {
         let title = this.state.title
         let author = this.state.author
 
-        fetch ( "http://localhost:5000/book/input", {
+        fetch ( "https://gm-book-api-practice.herokuapp.com/book/input", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -41,13 +41,21 @@ export default class AddBook extends Component {
         return (
             <div>
                 <div className='books'>
-                    <h1>What books have you read?</h1>
+                    <div>
+                        <p>What books have you read?</p>
+                    </div>
                     <form onSubmit={this.handleSubmit} >
-                        <label>Title</label>
-                        <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
-                        <label>Author</label>
-                        <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
-                        <input type="submit" value="Submit" />
+                        <div>
+                            <label>Title</label>
+                            <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
+                        </div>
+                        <div>
+                            <label>Author</label>
+                            <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
+                        </div>
+                        <div>
+                            <input type="submit" value="Submit" />
+                        </div>
                     </form>
                 </div>
 
