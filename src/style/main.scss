@@ -1,3 +1,6 @@
+@import "./variables.scss";
+
+
 html {
     font-size: 62.5%; // 1rem is 10px
 }
@@ -8,7 +11,10 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'montserrat';
+    // font-family: 'montserrat';
+    font-family: 'Radley', serif;
+    // font-family: 'Roboto', sans-serif;
+
 }
 
 body {
@@ -22,13 +28,245 @@ body {
 }
 
 .app {
-    margin-top: 2rem;
+    // margin-top: 2rem;
+    // display: flex;
     display: grid;
     justify-items: center;
+    grid-template-columns: 1fr;
+    // background-image: url(./accardi-marbling-3.jpg);
+    background-image: url(./marbled-endpage-flattened.jpg);
+}
+.homepage-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.nav {
-    width: 100%;
-    height: 30px;
-    font-size: 2em;
+.title-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $lighttan;
+    height: 140px;
+    background-color: $darkbrown;
+    margin-top: 70px;
+    padding: 30px;
+}
+
+.book-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $medbrown;
+    padding: 0px 20px 20px 20px;
+    width: 590px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    
+    .nav {
+        width: 100%;
+        height: 40px;
+        margin-left: 25px;
+        
+        .nav-tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 85px;
+            height: 30px;
+            background-color: $darkblue;
+            margin-right: 15px;
+            font-size: 1.4rem;
+            border-radius: 0px 0px 5px 5px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            transition: all .2s ease-in-out;
+    
+            &:hover {
+                height: 38px;
+            }
+
+            .nav-link {
+                color: $lighttan;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .book-card-wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 550px;
+        height: 150px;
+        background-color: $lighttan;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: .5em;
+
+        .book-info-item-wrapper {
+            width: 425px;
+            height: 33px;
+            background-color: $medtan;
+            border-radius: 5px;
+            // padding-left: 10px;
+            padding: 5px 5px 5px 10px;
+            margin-bottom: 10px;
+
+            .book-item-title {
+                margin-bottom: 2px;
+                font-size: 1.1rem;
+            }
+                
+            .book-item-title p {
+                font-family: 'Roboto', sans-serif;
+                color: $medblue;
+                margin: 0px;
+            }
+
+            .book-item-content {
+                padding-left: 10px;
+                margin-bottom: 0px;
+                font-size: 1.7rem;
+                border: 0px;
+                margin: 0px;
+                line-height: 80%;
+            }
+            
+            .book-item-content p {
+               color: $darkbrown;
+            }
+        }
+        
+        .editing-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 30px;
+            background-color: $medblue;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            border-radius: 15px;
+            transition: all .2s ease-in-out;
+            
+            &:hover {
+                background-color: $lightblue;
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            }
+            
+            .link {
+                color: $lighttan;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+    }
+}
+
+.right-side {
+    color: $lighttan;
+    height: 200px;
+    background-color: $darkbrown;
+    margin-top: 70px;
+}
+
+.add-book-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    height: 150px;
+    background-color: $darktan;
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin-bottom: 40px;
+
+    .add-book-header {
+        color: $darkbrown;
+        font-size: 2em;
+    }
+    
+    .add-book-header p {
+        height: 20px;
+        margin: 3px;
+    }
+
+    .add-book-form-wrapper {
+        background-color: $medblue;
+        width: 95%;
+        height: 90px;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px 0px;
+    }
+
+    .add-book-title {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.75em;
+        color: $lighttan;
+        margin: 5px;
+        
+        input {
+            width: 400px;
+            height: 23px;
+            background-color: $lighttan;
+            border: none;
+            border-radius: 5px;
+            margin-left: 34px;
+            padding-left: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+
+            &:focus {
+                background-color: $lightyellow;
+                outline: none;
+            }
+        }
+    }
+    
+    .add-book-author {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.75em;
+        color: $lighttan;
+        margin: 5px;
+        
+        input {
+            width: 400px;
+            height: 23px;
+            background-color: $lighttan;
+            border: none;
+            border-radius: 5px;
+            margin-left: 18px;
+            padding-left: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+            
+            &:focus {
+                background-color: $lightyellow;
+                outline: none;
+            }
+        }
+    }
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 25px;
+    background-color: $yellow;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    color: $darkbrown;
+    border: none;
+    
+    &:hover {
+        background-color: $lightyellow;
+        background-color: #E38128;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+}
 }

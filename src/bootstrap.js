@@ -21,12 +21,6 @@ function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
-        <div>
-          <div className="nav">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/add_book">Add Book</NavLink>
-            {/* <NavLink to="/books_to_read">Books to Read</NavLink> */}
-          </div>
           <div>
             <Route exact path='/' component={App} />
             <Route path='/add_book' component={AddBook} />
@@ -35,7 +29,6 @@ function main() {
             <Route path='/view_book/:id' component={ViewBook} />
               {/* this is a slug (: means it can change. Use "slug" if it's a string) */}
             {/* <Route path='/books_to_read' component={BooksToRead} /> */}
-          </div>
         </div>
       </BrowserRouter>
     </Provider>

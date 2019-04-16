@@ -18,7 +18,7 @@ export default function DeleteAction(props) {
 
     return (
         <div>
-            <Link onClick={bookDelete} to={"/deleted_book"}>Delete</Link>
+            <Link  className="link" onClick={bookDelete} to={"/deleted_book"}>Delete Book</Link>
         </div>
     )
 }

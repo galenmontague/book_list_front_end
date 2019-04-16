@@ -40,35 +40,30 @@ export default class AddBook extends Component {
     render() {
         return (
             <div>
-                <div className='books'>
-                    <div>
-                        <p>What books have you read?</p>
+                <div className="add-book-card-wrapper">
+                    <div className='add-book-header' >
+                        <p>Add a book to the list.</p>
                     </div>
-                    <form onSubmit={this.handleSubmit} >
-                        <div>
-                            <label>Title</label>
-                            <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
-                        </div>
-                        <div>
-                            <label>Author</label>
-                            <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
-                        </div>
-                        <div>
-                            <input type="submit" value="Submit" />
-                        </div>
-                    </form>
+                    <div className="add-book-form-wrapper">
+                        <form onSubmit={this.handleSubmit} >
+                            <div className='add-book-title'>
+                                <div>Title:</div>
+                                <div className='input-box-title'>
+                                    <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
+                                </div>
+                            </div>
+                            <div className='add-book-author'>
+                                <div>Author:</div>
+                                <div className='input-box-author'>
+                                    <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <button className="submit-button" type="submit" value="Add Book">Add Book</button>
+                    </div>
                 </div>
-
-                {/* <div className='books'>
-                    <h1>What books would you like to read?</h1>
-                    <form onSubmit={this.handleSubmit} >
-                        <label>Title</label>
-                        <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
-                        <label>Author</label>
-                        <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
-                        <input type="submit" value="Submit" />
-                    </form>
-                </div> */}
             </div>
         )
     }
