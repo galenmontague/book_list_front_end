@@ -8,6 +8,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
+        <h1>Hi Test</h1>
         <BooksReadIndex />
         {/* <div>
           <img src={ backgroundImage } alt='background-image' />
